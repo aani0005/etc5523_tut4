@@ -1,0 +1,25 @@
+
+---
+title: "tut4"
+format: html
+editor: visual
+---
+
+```{r}
+#|warning: false
+#|message: false
+#|label: fig-abc
+#|fig-cap: "data visualization"
+library(palmerpenguins)
+library(tidyverse)
+library(visdat)
+
+glimpse(penguins)
+vis_dat(penguins)
+```
+
+This is @fig-abc
+
+```{r}
+ggplot(penguins, aes(x= flipper_length_mm , y= body_mass_g)) + geom_point() + theme(aspect.ratio = 1) + geom_smooth(method =lm)
+```
